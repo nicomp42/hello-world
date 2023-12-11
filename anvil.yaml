@@ -6,7 +6,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Form1.News.ArticleEdit}
+startup: {type: form, module: Form1.News}
 package_name: Hello_World
 allow_embedding: false
 name: Hello World

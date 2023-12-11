@@ -12,3 +12,4 @@ class ArticleEdit(ArticleEditTemplate):
     # Any code you write here will run before the form opens.
     self.categories = [(cat['name'], cat) for cat in app_tables.categories.search()]
     self.category_box.items = self.categories
+    
