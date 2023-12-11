@@ -6,6 +6,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
+startup: {type: form, module: Form1.News.ArticleEdit}
 package_name: Hello_World
 allow_embedding: false
 name: Hello World
@@ -13,7 +14,7 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {title: Hello World, description: This is Hello World, logo_img: 'asset:20221203_161816
     resized.jpg'}
-startup_form: Form1
+startup_form: null
 db_schema:
   feedback:
     client: none
@@ -60,7 +61,7 @@ db_schema:
       target: categories
     title: Articles
   categories:
-    client: none
+    client: search
     server: full
     columns:
     - name: name

@@ -20,12 +20,13 @@ components:
   properties: {text: Category}
   type: Label
   layout_properties: {grid_position: 'SVZIVZ,ZRVIPK'}
-- name: category_drop_down
-  properties: {}
+- name: category_box
+  properties: {include_placeholder: true}
   type: DropDown
   layout_properties: {grid_position: 'SVZIVZ,FEYPBW'}
   data_bindings:
   - {property: placeholder, code: Choose Category, writeback: false}
+  - {property: items, code: '', writeback: false}
 - name: label_4
   properties: {text: Image}
   type: Label
