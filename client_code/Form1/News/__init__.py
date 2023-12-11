@@ -25,4 +25,6 @@ class News(NewsTemplate):
     )
     # If the alert returned 'True', the save button was clicked.
     if save_clicked:
-      print(new_article)
+      #alert(("Save Clicked"))
+      #print(new_article)
+      anvil.server.call('add_article', new_article)
