@@ -32,3 +32,12 @@ def add_article(article_dict):
     created=datetime.now(),
     **article_dict
   )
+
+@anvil.server.callable
+def get_articles():
+  # Get a list of articles from the Data Table, sorted by 'created' column, in descending order
+  #for r in app_tables.articles.search(tables.order_by("created", ascending=False)):
+  #  print("articles table:", r)
+  return app_tables.articles.search(
+    tables.order_by("created", ascending=False)
+  )

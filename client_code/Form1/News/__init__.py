@@ -12,6 +12,7 @@ class News(NewsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.refresh_articles()
 
   def add_article_button_click(self, **event_args):
     # Initialise an empty dictionary to store the user inputs
@@ -28,3 +29,8 @@ class News(NewsTemplate):
       #alert(("Save Clicked"))
       #print(new_article)
       anvil.server.call('add_article', new_article)
+      self.refresh_articles()
+  def refresh_articles(self):
+    # Load existing articles from the Data Table, 
+    # and display them in the RepeatingPanel
+    self.articles_panel.items = anvil.server.call('get_articles')
