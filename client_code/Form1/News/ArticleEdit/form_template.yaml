@@ -4,7 +4,7 @@ components:
   properties: {text: Title}
   type: Label
   layout_properties: {grid_position: 'RKPYCK,PJPOMW'}
-- name: text_box_1
+- name: title_text_box
   properties: {}
   type: TextBox
   layout_properties: {grid_position: 'RKPYCK,MRJFNA'}
@@ -28,4 +28,8 @@ components:
   properties: {text: Image}
   type: Label
   layout_properties: {grid_position: 'FVELSH,HRQXCA'}
+- name: image_uploader
+  properties: {}
+  type: FileLoader
+  layout_properties: {grid_position: 'FVELSH,EIPOJB'}
 is_package: true
