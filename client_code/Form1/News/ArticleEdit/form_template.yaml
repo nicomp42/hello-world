@@ -12,15 +12,15 @@ components:
   properties: {text: Content}
   type: Label
   layout_properties: {grid_position: 'KVPLBE,QGBRAB'}
-- name: text_box_2
+- name: content_text_area
   properties: {}
-  type: TextBox
-  layout_properties: {grid_position: 'KVPLBE,JEEAQY'}
+  type: TextArea
+  layout_properties: {grid_position: 'KVPLBE,FRSATR'}
 - name: label_3
   properties: {text: Category}
   type: Label
   layout_properties: {grid_position: 'SVZIVZ,ZRVIPK'}
-- name: drop_down_1
+- name: category_drop_down
   properties: {}
   type: DropDown
   layout_properties: {grid_position: 'SVZIVZ,FEYPBW'}
