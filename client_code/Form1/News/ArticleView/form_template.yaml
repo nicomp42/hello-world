@@ -1,0 +1,26 @@
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KJBCVZ,WZCKDD'}
+  components:
+  - name: title_label
+    properties: {role: title, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'CDGWHQ,AHOOSE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''title'']', writeback: false}
+  - name: category_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CDGWHQ,WEMHMC'}
+  - name: content_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TEPLQW,NQYGEQ'}
+  - name: image
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'XUNTRU,MRZFMA'}
+is_package: true

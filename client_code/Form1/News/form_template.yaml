@@ -5,4 +5,8 @@ components:
   type: Button
   layout_properties: {grid_position: 'SQNEBH,KPGPUW'}
   event_bindings: {click: add_article_button_click}
+- name: articles_panel
+  properties: {item_template: Form1.News.ArticleView}
+  type: RepeatingPanel
+  layout_properties: {grid_position: 'PZONFQ,MSILED'}
 is_package: true
