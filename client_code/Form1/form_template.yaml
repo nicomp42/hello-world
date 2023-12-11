@@ -7,7 +7,44 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NMEEWA,VQYGKR'}
+  - name: FeedbackForm
+    properties: {text: Feedback Form, role: headline}
+    type: Label
+    layout_properties: {grid_position: 'UUIIIA,IEGORT'}
+  - name: Name
+    properties: {text: Name}
+    type: Label
+    layout_properties: {grid_position: 'FYJEZE,GSFCYC'}
+  - name: name_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'OJPBHT,KWQYSU'}
+  - name: eMail
+    properties: {text: eMail Address}
+    type: Label
+    layout_properties: {grid_position: 'FGWRYS,DZBHGA'}
+  - name: email_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'SLJZWU,VTGLNP'}
+  - name: Feedback
+    properties: {text: Feedback (Be nice!)}
+    type: Label
+    layout_properties: {grid_position: 'TQFQGA,LGOMBM'}
+  - name: feedback_box
+    properties: {}
+    type: TextArea
+    layout_properties: {grid_position: 'BHTDVX,NGIBJY'}
+  - name: button_1
+    properties: {text: Submit, role: filled-button}
+    type: Button
+    layout_properties: {grid_position: 'JQLOAA,AFYSVO'}
+    event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
