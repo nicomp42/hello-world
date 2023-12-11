@@ -31,5 +31,40 @@ db_schema:
     - name: created
       admin_ui: {order: 3, width: 200}
       type: datetime
+    - name: rate
+      admin_ui: {width: 200, order: 4}
+      type: string
     title: Feedback
+  articles:
+    client: none
+    server: full
+    columns:
+    - name: title
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: content
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: image
+      admin_ui: {width: 200, order: 2}
+      type: media
+    - name: created
+      admin_ui: {width: 200, order: 3}
+      type: datetime
+    - name: updated
+      admin_ui: {width: 200, order: 4}
+      type: datetime
+    - name: category
+      admin_ui: {width: 200, order: 5}
+      type: link_single
+      target: categories
+    title: Articles
+  categories:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: Categories
 renamed: true

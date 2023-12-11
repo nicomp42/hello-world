@@ -13,12 +13,13 @@ import anvil.server
 #
 from datetime import datetime
 @anvil.server.callable
-def add_feedback(name, email, feedback):
+def add_feedback(name, email, feedback, rate):
   app_tables.feedback.add_row(
     name=name, 
     email=email, 
     feedback=feedback, 
-    created=datetime.now()
+    created=datetime.now(),
+    rate = rate
   )
   anvil.email.send(to="DirkGentlyhhgg@gmail.com",
                    subject=f"Feedback from {name}",

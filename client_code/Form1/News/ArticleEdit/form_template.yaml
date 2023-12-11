@@ -1,0 +1,31 @@
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {text: Title}
+  type: Label
+  layout_properties: {grid_position: 'RKPYCK,PJPOMW'}
+- name: text_box_1
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'RKPYCK,MRJFNA'}
+- name: label_2
+  properties: {text: Content}
+  type: Label
+  layout_properties: {grid_position: 'KVPLBE,QGBRAB'}
+- name: text_box_2
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'KVPLBE,JEEAQY'}
+- name: label_3
+  properties: {text: Category}
+  type: Label
+  layout_properties: {grid_position: 'SVZIVZ,ZRVIPK'}
+- name: drop_down_1
+  properties: {}
+  type: DropDown
+  layout_properties: {grid_position: 'SVZIVZ,FEYPBW'}
+- name: label_4
+  properties: {text: Image}
+  type: Label
+  layout_properties: {grid_position: 'FVELSH,HRQXCA'}
+is_package: true

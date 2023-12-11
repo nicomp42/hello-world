@@ -18,6 +18,11 @@ class Form1(Form1Template):
     name = self.name_box.text
     email = self.email_box.text
     feedback = self.feedback_box.text
+    rate = self.rate_dropdown.selected_value
     # Call your 'add_feedback' server function
     # pass in name, email and feedback as arguments
-    anvil.server.call('add_feedback', name, email, feedback)
+    anvil.server.call('add_feedback', name, email, feedback, rate)
+
+  def Gmail_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
