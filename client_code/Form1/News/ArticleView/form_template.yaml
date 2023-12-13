@@ -17,6 +17,11 @@ components:
     layout_properties: {grid_position: 'CDGWHQ,WEMHMC'}
     data_bindings:
     - {property: text, code: 'self.item[''category''][''name'']', writeback: false}
+  - name: edit_article_button
+    properties: {text: '', role: filled-button, icon: 'fa:pencil'}
+    type: Button
+    layout_properties: {grid_position: 'CDGWHQ,DAZWCC'}
+    event_bindings: {click: edit_article_button_click}
   - name: content_label
     properties: {}
     type: Label

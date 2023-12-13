@@ -41,3 +41,12 @@ def get_articles():
   return app_tables.articles.search(
     tables.order_by("created", ascending=False)
   )
+
+@anvil.server.callable
+def update_article(article, article_dict):
+  # check that the article given is really a row in the ‘articles’ table
+  if app_tables.articles.has_row(article):
+    article_dict['updated'] = datetime.now()
+    article.update(**article_dict)
+  else:
+    raise Exception("Article does not exist")
