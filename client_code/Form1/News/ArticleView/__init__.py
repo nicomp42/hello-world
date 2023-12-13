@@ -28,3 +28,12 @@ class ArticleView(ArticleViewTemplate):
     # Update the article if the user clicks save
     if save_clicked:
       anvil.server.call('update_article', self.item, article_copy)
+      # Now refresh the page
+      self.refresh_data_bindings()
+
+  def button_1_click(self, **event_args):
+    # Get the user to confirm if they wish to delete the article
+    # If yes, raise the 'x-delete-article' event on the parent 
+    # (which is the articles_panel on Homepage)
+    if confirm("Are you sure you want to delete {}?".format(self.item['title'])):
+      self.parent.raise_event('x-delete-article', article=self.item)

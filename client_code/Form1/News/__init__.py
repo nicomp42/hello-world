@@ -14,6 +14,9 @@ class News(NewsTemplate):
     # Any code you write here will run before the form opens.
     self.refresh_articles()
 
+    # Set an event handler on the RepeatingPanel (our 'articles_panel')
+    self.articles_panel.set_event_handler('x-delete-article', self.delete_article)
+  
   def add_article_button_click(self, **event_args):
     # Initialise an empty dictionary to store the user inputs
     new_article = {}
@@ -34,3 +37,9 @@ class News(NewsTemplate):
     # Load existing articles from the Data Table, 
     # and display them in the RepeatingPanel
     self.articles_panel.items = anvil.server.call('get_articles')
+    
+  def delete_article(self, article, **event_args):
+    # Delete the article
+    anvil.server.call('delete_article', article)
+    # Refresh articles to remove the deleted article from the Homepage
+    self.refresh_articles()
