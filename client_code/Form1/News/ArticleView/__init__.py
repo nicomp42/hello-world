@@ -37,3 +37,7 @@ class ArticleView(ArticleViewTemplate):
     # (which is the articles_panel on Homepage)
     if confirm("Are you sure you want to delete {}?".format(self.item['title'])):
       self.parent.raise_event('x-delete-article', article=self.item)
+
+  def flip_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    print("flipping")

@@ -4,6 +4,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
+from PIL import Image
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -58,3 +59,8 @@ def delete_article(article):
     article.delete()
   else:
     raise Exception("Article does not exist")
+
+@anvil.server.callable
+def flipImage(myImage):
+  vertical_img = original_img.transpose(method=Image.FLIP_TOP_BOTTOM)
+  return vertical_img
